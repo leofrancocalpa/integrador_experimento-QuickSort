@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuickSort_Experiment
 {
-    class QuickSort
+    class Arreglos
     {
-
     }
 }
