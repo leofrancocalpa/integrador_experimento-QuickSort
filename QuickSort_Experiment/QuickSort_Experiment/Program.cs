@@ -10,7 +10,17 @@ namespace QuickSort_Experiment
     {
         static void Main(string[] args)
         {
-            
+            int[] arreglo = new int[10];
+            Random r = new Random();
+            QuickSort qs = new QuickSort();
+            for (int i = 0; i < 10; i++)
+            {
+                arreglo[i] = r.Next(0, 100000000);
+            }
+            qs.RandomizedQS(arreglo, 0, arreglo.Length - 1);
+            Console.WriteLine("Done!");
+            Console.ReadLine();
+            arreglo.ToList().ForEach(x => Console.WriteLine(x));
         }
     }
 }

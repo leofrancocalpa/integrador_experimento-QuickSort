@@ -9,72 +9,39 @@ namespace QuickSort_Experiment
     class Arreglo
     {
 
-        private int[] arregloEsperado { get; set; }
+        private int[] arreglo { get; set; }
+        private int[] arregloA { get; set; }
+        private int[] arregloD { get; set; }
         private Random random;
+        private QuickSort qs;
 
-        public int[] ArregloDesorganizado(int valor)
+        public Arreglo(int n)
         {
+            qs = new QuickSort();
             random = new Random();
-            for (int i = 0; i <= valor; i++)
-            {
-                arregloEsperado[i] = random.Next(1, 1000000000);
-            }
-
-            return arregloEsperado;
+            ArregloDesorganizado(n);
+            ArregloAscendente();
+            ArregloDescendente();
         }
 
-        public int[] ArregloAscendente(int valor)
-        {
-            int num0 = 0;
-            int num1 = 1;
-            bool primer = false;
-            random = new Random();
+        public void ArregloDesorganizado(int valor)
+        {            
             for (int i = 0; i <= valor; i++)
             {
-                num0 = random.Next(1, 1000000000);
-                num1 = random.Next(1, 1000000000);
-
-                if (primer == false)
-                {
-                    arregloEsperado[i] = num0;
-                    primer = true;
-                }
-                else
-                {
-
-
-                    if (num0 <= num1)
-                    {
-                        arregloEsperado[i] = num0;
-                    }
-                    else if (num1 < num0)
-                    {
-                        arregloEsperado[i] = num1;
-                    }
-                }
+                arreglo[i] = random.Next(0, 1000000000);
+                arregloA[i] = random.Next(0, 1000000000);
+                arregloD[i] = random.Next(0, 1000000000);
             }
-
-            return arregloEsperado;
         }
 
-        public int[] ArregloDescendente(int valor)
+        public void ArregloAscendente()
         {
-            random = new Random();
-            for (int i = 0; i <= valor; i++)
-            {
-                int aleatorio = random.Next(1, 1000000000);
-                int num0 = random.Next(1, 250000000);
-                int num1 = random.Next(num0, 500000000);
-                int num2 = random.Next(num1, 750000000);
-                int num3 = random.Next(num2, 1000000000); ;
-                if (num0 < num1)
-                {
+            qs.RandomizedPartition(arregloA, 0, arregloA.Length - 1);
+        }
 
-                    arregloEsperado[i] = aleatorio;
-                }
-
-            }
-            return arregloEsperado;
+        public void ArregloDescendente()
+        {
+            qs.RandomizedPartitionD(arregloD, 0, arregloD.Length - 1);
         }
     }
 }
