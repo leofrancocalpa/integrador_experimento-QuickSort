@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickSort_Experiment
+namespace QuickSortAlgoritm
 {
     public class QuickSort
     {
@@ -31,7 +31,7 @@ namespace QuickSort_Experiment
         {
             int pivot = array[right];
             int i = left;
-            for(int j=left; j < right; j++)
+            for (int j = left; j < right; j++)
             {
                 if (array[j] <= pivot)
                 {
