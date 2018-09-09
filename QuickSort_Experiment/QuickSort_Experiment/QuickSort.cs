@@ -16,21 +16,30 @@ namespace QuickSort_Experiment
         //Quick Sort no Randomizado
         public int QuickSortMethod(int[] array, int left, int right)
         {
-            int count = 0;
-            if (left < right)
+            try
             {
-                int pivot = Partition(array, left, right);
-                QuickSortMethod(array, left, pivot - 1);
-                QuickSortMethod(array, pivot + 1, right);
-            }
+                int count = 0;
+                if (left < right)
+                {
+                    int pivot = Partition(array, left, right);
+                    QuickSortMethod(array, left, pivot - 1);
+                    QuickSortMethod(array, pivot + 1, right);
+                }
 
-            return count;
+                return count;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return 0;
+            }
+            
         }
 
         public int Partition(int[] array, int left, int right)
         {
             int pivot = array[right];
-            int i = left;
+            int i = left-1;
             for(int j=left; j < right; j++)
             {
                 if (array[j] <= pivot)
@@ -43,7 +52,7 @@ namespace QuickSort_Experiment
             }
             int temp1 = array[i + 1];
             array[i + 1] = array[right];
-            array[right] = array[temp1];
+            array[right] = temp1;
             return i + 1;
         }
 
