@@ -38,14 +38,14 @@ namespace QuickSort_Experiment
 
         public int[] ArregloAscendente()
         {
-            qs.RandomizedQS(arregloA, 0, arregloA.Length - 1);
-            return arregloA;
+            //qs.QuickSortMethodD(arregloA, 0, arregloA.Length - 1);
+            return arregloA.OrderBy(x=>x).ToArray();
         }
 
         public int[] ArregloDescendente()
         {
-            qs.RandomizedQS(arregloD, 0, arregloD.Length - 1);
-            return arregloD;
+            //qs.QuickSortMethodD(arregloD, 0, arregloD.Length - 1);
+            return arregloD.OrderByDescending(x=>x).ToArray();
         }
     }
 }

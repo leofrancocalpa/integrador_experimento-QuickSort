@@ -87,6 +87,28 @@ namespace QuickSort_Experiment
 
         //||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+        public int QuickSortMethodD(int[] array, int left, int right)
+        {
+            try
+            {
+                int count = 0;
+                if (left < right)
+                {
+                    int pivot = PartitionD(array, left, right);
+                    QuickSortMethodD(array, left, pivot - 1);
+                    QuickSortMethodD(array, pivot + 1, right);
+                }
+
+                return count;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return 0;
+            }
+
+        }
+
         public int RandomizedQSD(int[] array, int left, int right)
         {
             int count = 0;
