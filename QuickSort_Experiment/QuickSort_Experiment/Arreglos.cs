@@ -6,42 +6,46 @@ using System.Threading.Tasks;
 
 namespace QuickSort_Experiment
 {
-    class Arreglo
+    public class Arreglo
     {
 
-        private int[] arreglo { get; set; }
-        private int[] arregloA { get; set; }
-        private int[] arregloD { get; set; }
+        int[] arreglo { get; set; }
+        int[] arregloA { get; set; }
+        int[] arregloD { get; set; }
         private Random random;
         private QuickSort qs;
 
-        public Arreglo(int n)
+        public Arreglo()
         {
             qs = new QuickSort();
             random = new Random();
-            ArregloDesorganizado(n);
-            ArregloAscendente();
-            ArregloDescendente();
+            
         }
 
-        public void ArregloDesorganizado(int valor)
-        {            
-            for (int i = 0; i <= valor; i++)
+        public int[] ArregloDesorganizado(int valor)
+        {
+            arreglo = new int[valor];
+            arregloA = new int[valor];
+            arregloD = new int[valor];
+            for (int i = 0; i < valor; i++)
             {
-                arreglo[i] = random.Next(0, 1000000000);
-                arregloA[i] = random.Next(0, 1000000000);
-                arregloD[i] = random.Next(0, 1000000000);
+                arreglo[i] = random.Next(1, 1000000000);
+                arregloA[i] = arreglo[i];
+                arregloD[i] =arreglo[i];
             }
+            return arreglo;
         }
 
-        public void ArregloAscendente()
+        public int[] ArregloAscendente()
         {
-            qs.RandomizedPartition(arregloA, 0, arregloA.Length - 1);
+            qs.RandomizedQS(arregloA, 0, arregloA.Length - 1);
+            return arregloA;
         }
 
-        public void ArregloDescendente()
+        public int[] ArregloDescendente()
         {
-            qs.RandomizedPartitionD(arregloD, 0, arregloD.Length - 1);
+            qs.RandomizedQS(arregloD, 0, arregloD.Length - 1);
+            return arregloD;
         }
     }
 }
