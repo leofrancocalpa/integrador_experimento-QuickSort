@@ -1,0 +1,60 @@
+********************************
+   Experimento entrada 10^1
+********************************
+
+
+Tiempo QS entrada Ascendente: 0,0059722
+Tiempo RQS entrada Ascendente: 0,0200268
+Tiempo QS entrada Descendente: 0
+Tiempo RQS entrada Descendente: 0,0190264
+Tiempo QS entrada Aleatoria: 0,0010008
+Tiempo RQS entrada Aleatoria: 0,0169687
+
+
+********************************
+   Experimento entrada 10^2
+********************************
+
+
+Tiempo QS entrada Ascendente: 0,0768978
+Tiempo RQS entrada Ascendente: 0,1669436
+Tiempo QS entrada Descendente: 0,0589733
+Tiempo RQS entrada Descendente: 0,1921733
+Tiempo QS entrada Aleatoria: 0,0159905
+Tiempo RQS entrada Aleatoria: 0,1579775
+
+
+********************************
+   Experimento entrada 10^3
+********************************
+
+
+Tiempo QS entrada Ascendente: 6,89649540000003
+Tiempo RQS entrada Ascendente: 1,7661121
+Tiempo QS entrada Descendente: 4,89656179999999
+Tiempo RQS entrada Descendente: 2,0352736
+Tiempo QS entrada Aleatoria: 0,208932
+Tiempo RQS entrada Aleatoria: 1,9895787
+
+
+********************************
+   Experimento entrada 10^4
+********************************
+
+
+Tiempo QS entrada Ascendente: 684,889100800001
+Tiempo RQS entrada Ascendente: 18,3074478
+Tiempo QS entrada Descendente: 482,262521699999
+Tiempo RQS entrada Descendente: 20,6023508
+Tiempo QS entrada Aleatoria: 2,7456312
+Tiempo RQS entrada Aleatoria: 20,3845776
+
+
+********************************
+   Experimento entrada 10^5
+********************************
+
+
+
+Process is terminated due to StackOverflowException.
+Presione una tecla para continuar . . .

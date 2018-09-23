@@ -24,7 +24,7 @@ namespace UnitTest
         public void setEscene1()
         {
             a = new Arreglo();
-            array = a.ArregloDesorganizado(1000000);
+            array = a.ArregloDesorganizado(100000);
             arrayA = a.ArregloAscendente();
             arrayD = a.ArregloDescendente();
         }
@@ -33,7 +33,7 @@ namespace UnitTest
         {
             Random r = new Random();
             a = new Arreglo();
-            array = a.ArregloDesorganizado(r.Next(10,1000000));
+            array = a.ArregloDesorganizado(r.Next(10,100000));
             arrayA = a.ArregloAscendente();
             arrayD = a.ArregloDescendente();
         }
